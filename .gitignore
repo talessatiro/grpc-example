@@ -363,6 +363,3 @@ FodyWeavers.xsd
 
 # JetBrains
 .idea
-
-# Node
-node_modules
