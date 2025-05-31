@@ -45,7 +45,7 @@ npm start
 
 Note: the client logic was implemented in the file `stock-market-client`, so, there are four ways to validate the server:
 
-- Unary: Uncomment the function executeUnaryCommunicationTest (line 132)
-- Server Streaming: Uncomment the function executeServerStreamingCommunicationTest (line 135)
-- Client Streaming: Uncomment the function executeClientStreamingCommunicationTest (line 138)
-- Bidirectional Streaming: Uncomment the function executeBidirectionalStreamingCommunicationTest (line 141)
+- Unary: Uncomment the function executeUnaryCommunicationTest (line 178)
+- Server Streaming: Uncomment the function executeServerStreamingCommunicationTest (line 181)
+- Client Streaming: Uncomment the function executeClientStreamingCommunicationTest (line 184)
+- Bidirectional Streaming: Uncomment the function executeBidirectionalStreamingCommunicationTest (line 187)
