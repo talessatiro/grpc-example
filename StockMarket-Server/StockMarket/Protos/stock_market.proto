@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+option csharp_namespace = "StockMarket.Protos";
+
+package stock_market;
+
+service StockPrice {
+  rpc GetStockPrice (StockRequest) returns (StockResponse);
+  rpc GetStockPriceServerStreaming (StockRequest) returns (stream StockResponse);
+  rpc UpdateStockPriceClientStreaming (stream UpdateStockPriceRequest) returns (UpdateStockPriceBatchResponse);
+  rpc GetStockPriceBidirectionalStreaming (stream StockRequest) returns (stream StockResponse);
+}
+
+message StockRequest {
+  string symbol = 1;
+}
+
+message StockResponse {
+  string symbol = 1;
+  double price = 2;
+  oneof time {
+    int64 timestamp = 3;
+    string datetime = 4;
+  }
+}
+
+message UpdateStockPriceRequest {
+  string symbol = 1;
+  double price = 2;
+}
+
+message UpdateStockPriceBatchResponse {
+  string message = 1;
+}
+
+
